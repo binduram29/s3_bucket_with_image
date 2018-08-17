@@ -1,0 +1,5 @@
+S3_BUCKET_NAME: 'bindu-bhashwith'
+AWS_ACCESS_KEY_ID: 'AKIAINP7BCTITT5TL3RA'
+AWS_SECRET_ACCESS_KEY: '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'
+S3_REGION: 's3-ap-south-1'
+S3_HOST_NAME: 's3-ap-south-1.amazonaws.com'

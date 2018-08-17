@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<input type="text" id="overlay_text"></input>
+
+<p>
+	<b>Avatar:</b>
+  <%#= image_tag @user.avatar.url, :id => 'demo' %>
+</p>
+
+<div class="image">
+
+      <%= image_tag @user.avatar.url, :id => 'demo', :width=>"50", :height=>"50"%>
+      
+      <h2 id="overtext">A Movie in the Park:<br />Kung Fu Panda</h2>
+
+</div>
+
+
+<div id="data">The data goes here</div>
+<button id="show">Show Data</button>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+<style>
+  .image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function(){
+    alert("Sho page................");
+    $("#overlay_text").keypress(function(){
+        var txt = $("#overlay_text").val();
+        $("#overtext").text(txt);
+    });
+
+});
+</script>
